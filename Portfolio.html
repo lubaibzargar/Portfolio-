@@ -1,0 +1,122 @@
+<!DOCTYPE html><html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Portfolio of Lubaib Zargar - Frontend Developer & Web Designer">
+  <meta name="author" content="Lubaib Zargar">
+  <title>Lubaib Zargar – Portfolio</title>
+  <!-- Google Font -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg: #f5f5f5;
+      --dark: #222222;
+      --primary: #1e3799;
+      --accent: #38ada9;
+      --light: #ffffff;
+      --shadow: 0 4px 12px rgba(0,0,0,0.1);
+    }
+    *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; scroll-behavior: smooth; }
+    body { font-family: 'Inter', sans-serif; background: var(--bg); color: var(--dark); line-height: 1.6; }
+    header { background: var(--primary); color: var(--light); text-align: center; padding: 80px 20px; position: relative; }
+    header h1 { font-size: 3rem; }
+    header p { margin-top: 10px; font-size: 1.2rem; opacity: 0.9; }
+    #dark-toggle { position: absolute; top: 20px; right: 20px; background: var(--accent); border: none; padding: 8px; border-radius: 50%; cursor: pointer; }
+    nav { background: var(--dark); display: flex; justify-content: center; gap: 20px; padding: 15px; }
+    nav a { color: var(--light); text-decoration: none; font-weight: 600; transition: color 0.3s; }
+    nav a:hover { color: var(--accent); }
+    section { max-width: 900px; margin: 60px auto; padding: 0 20px; }
+    h2 { font-size: 2rem; color: var(--primary); margin-bottom: 20px; border-left: 5px solid var(--accent); padding-left: 15px; }
+    .about p { margin-top: 15px; }
+    .projects-container { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 20px; }
+    .project-card { background: var(--light); border-radius: 10px; box-shadow: var(--shadow); overflow: hidden; transition: transform 0.3s; }
+    .project-card:hover { transform: translateY(-5px); }
+    .project-card img { width: 100%; display: block; }
+    .project-card-content { padding: 20px; }
+    .project-card-content h3 { margin-bottom: 10px; font-size: 1.3rem; }
+    .project-card-content p { color: #555; font-size: 0.95rem; }
+    .project-links { margin-top: 15px; }
+    .project-links a { text-decoration: none; padding: 8px 16px; background: var(--primary); color: var(--light); border-radius: 6px; margin-right: 10px; font-size: 0.9rem; transition: background 0.3s; }
+    .project-links a:hover { background: var(--accent); }
+    .skills-list { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 15px; }
+    .skills-list li { background: var(--light); padding: 8px 12px; border-radius: 6px; box-shadow: var(--shadow); font-size: 0.9rem; }
+    .contact p { margin-bottom: 10px; }
+    .social-links { display: flex; gap: 15px; margin-top: 10px; }
+    .social-links a { color: var(--dark); font-size: 1.2rem; text-decoration: none; transition: color 0.3s; }
+    .social-links a:hover { color: var(--primary); }
+    .resume-btn { display: inline-block; margin-top: 15px; padding: 10px 20px; background: var(--accent); color: var(--light); text-decoration: none; border-radius: 6px; font-weight: 600; transition: background 0.3s; }
+    .resume-btn:hover { background: var(--primary); }
+    footer { text-align: center; padding: 20px; background: var(--dark); color: var(--light); font-size: 0.9rem; }
+    @media (max-width: 600px) { header h1 { font-size: 2rem; } nav { flex-direction: column; gap: 10px; } }
+    /* Dark Mode Styles */
+    body.dark { background: var(--dark); color: var(--light); }
+    body.dark header { background: var(--primary); }
+    body.dark nav { background: var(--primary); }
+    body.dark section { background: var(--dark); }
+    body.dark .project-card { background: #2f3640; box-shadow: none; }
+    body.dark .project-card-content p { color: #ccc; }
+    body.dark .skills-list li { background: #2f3640; color: #ccc; box-shadow: none; }
+  </style>
+</head>
+<body>  <header>
+    <h1>Lubaib Zargar</h1>
+    <p>Frontend Developer & Web Designer</p>
+    <button id="dark-toggle" title="Toggle Dark Mode">🌓</button>
+  </header>  <nav>
+    <a href="#about">About</a>
+    <a href="#projects">Projects</a>
+    <a href="#skills">Skills</a>
+    <a href="#contact">Contact</a>
+  </nav>  <section id="about" class="about">
+    <h2>About Me</h2>
+    <p>Hello! I'm Lubaib, a self-taught frontend developer from Kashmir. I transform ideas into clean, responsive websites with a focus on performance and user experience. My tools: HTML, CSS, and JavaScript.</p>
+    <a href="resume.pdf" class="resume-btn" download>Download CV</a>
+  </section>  <section id="projects">
+    <h2>Projects</h2>
+    <div class="projects-container">
+      <div class="project-card">
+        <img src="https://via.placeholder.com/300x180.png?text=Focus+Academy" alt="Focus Academy">
+        <div class="project-card-content">
+          <h3>Focus Academy</h3>
+          <p>A mock tuition center site built to showcase frontend skills in HTML and CSS.</p>
+          <div class="project-links">
+            <a href="https://lubaibzargar.github.io/focus-academy" target="_blank">Live</a>
+            <a href="https://github.com/lubaibzargar/focus-academy" target="_blank">Code</a>
+          </div>
+        </div>
+      </div>
+      <div class="project-card">
+        <img src="https://via.placeholder.com/300x180.png?text=Portfolio+Site" alt="Portfolio">
+        <div class="project-card-content">
+          <h3>My Portfolio</h3>
+          <p>A clean and responsive personal portfolio website to showcase my profile and projects.</p>
+          <div class="project-links">
+            <a href="https://lubaibzargar.github.io/portfolio" target="_blank">Live</a>
+            <a href="https://github.com/lubaibzargar/portfolio" target="_blank">Code</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>  <section id="skills">
+    <h2>Skills</h2>
+    <ul class="skills-list">
+      <li>HTML</li><li>CSS</li><li>JavaScript</li><li>Responsive Design</li><li>Git & GitHub</li>
+    </ul>
+  </section>  <section id="contact" class="contact">
+    <h2>Contact Me</h2>
+    <p>Email: <a href="mailto:lubaibzargar11@gmail.com">lubaibzargar11@gmail.com</a></p>
+    <p>Location: Kulgam, Kashmir</p>
+    <div class="social-links">
+      <a href="https://github.com/lubaibzargar" target="_blank" title="GitHub">🐙</a>
+      <a href="https://www.linkedin.com/in/lubaibzargar" target="_blank" title="LinkedIn">🔗</a>
+      <a href="mailto:lubaibzargar11@gmail.com" title="Email">✉️</a>
+    </div>
+  </section>  <footer>
+    &copy; 2025 Lubaib Zargar. All rights reserved.
+  </footer>  <script>
+    const toggle = document.getElementById('dark-toggle');
+    toggle.addEventListener('click', () => {
+      document.body.classList.toggle('dark');
+    });
+  </script></body>
+</html>
